@@ -8,6 +8,7 @@ Gym Sharks is a web application designed to help users with their fitness journe
 - Profile management: Users can view and edit their profiles.
 - Exercise recommendations: Users can select a muscle group and get a list of exercises.
 - Image gallery: A gallery of fitness-related images is available for users to view.
+- Admin can add, update, delete and see all images that in gallery.
 
 ## Technologies Used
 
