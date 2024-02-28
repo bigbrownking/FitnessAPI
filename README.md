@@ -41,4 +41,6 @@ MIT
 login: alisher
 password: 111
 
+## Deploy url
 
+https://fitnessapi-hk8v.onrender.com
