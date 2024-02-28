@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/profile.css">
+</head>
+<style>
+    
+    header{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        display: flex;
+    }
+    ul li {
+        list-style: none;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+    ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    </style>
+<body>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <header>
+        <nav>
+            <ul><li><a href="/">Home</a></li></ul>
+            <ul><li><a href="/profile">Profile</a></li></ul>
+        </nav>
+    </header> 
+    <h1>User Profile</h1>
+    <h2>Your Profile</h2>
+    <div class="profile-info">
+        <form action="/profile/edit" method="post">
+            <p><strong>Username:</strong> <%= user.username %></p>
+            <p><strong>User status:</strong> <%= user.admin_status %></p>
+            <p><strong>Creation Date:</strong> <%= user.creation_date %></p>
+            <p><strong>Update Date:</strong> <%= user.update_date %></p>
+            
+            <label for="newUsername">New Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required><br>
+        
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required><br>
+        
+            <button type="submit">Save Changes</button>
+        </form>  
+        <form action="/profile/delete" method="post">
+            <button type="submit">Delete Your Account</button>
+        </form>          
+    </div>
+    <footer>
+        <p>Alisher Khairullin SE-2207.</p>
+    </footer>
+</body>
+</html>

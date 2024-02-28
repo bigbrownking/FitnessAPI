@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="/profile.css">
+</head>
+<style>
+    
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+}
+ul li {
+    list-style: none;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+</style>
+<body>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <header>
+        <nav>
+            <ul><li><a href="/">Home</a></li></ul>
+            <ul><li><a href="/profile">Profile</a></li></ul>
+        </nav>
+    </header>
+    <h1>Admin Page</h1>
+    <h2>All User Profiles</h2>
+    <ul>
+        <% users.forEach(user => { %>
+            <li>
+                <h3>User Profile</h3>
+                <div class="profile-info">
+                    <form action="/profile/edit" method="post">
+                        <p><strong>Username:</strong> <%= user.username %></p>
+                        <p><strong>User status:</strong> <%= user.admin_status %></p>
+                        <p><strong>Creation Date:</strong> <%= user.creation_date %></p>
+                        <p><strong>Update Date:</strong> <%= user.update_date %></p>
+                        
+                        <label for="newUsername">New Username:</label>
+                        <input type="text" id="newUsername" name="newUsername" required><br>
+                    
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" id="newPassword" name="newPassword" required><br>
+                    
+                        <button type="submit">Save Changes</button>
+                        <input type="hidden" name="userId" value="<%= user._id %>">
+                    </form>    
+                    <% if (user.admin_status === 'regular') { %>
+                        <form action="/profile/delete" method="post">
+                            <input type="hidden" name="userId" value="<%= user._id %>">
+                            <button type="submit">Delete user account</button>
+                        </form>
+                    <% } %>  
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+    <h2>Add new image to gallery</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Enter image name" required>
+        <input type="file" name="image" required>
+        <button type="submit">Upload Image</button>
+    </form>
+    <h2>Gallery</h2>
+<div style="overflow-x: auto; white-space: nowrap;">
+    <ul style="display: inline-block;">
+        <% items.forEach(item => { %>
+            <li style="display: inline-block; margin-right: 20px;">
+                <h3><%= item.name %></h3>
+                <img src="<%= item.picture %>" alt="<%= item.name %>">
+                <p>Created at: <%= item.createdAt %></p>
+                <p>Updated at: <%= item.updatedAt %></p>
+                <form action="/update-item" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="itemId" value="<%= item._id %>">
+                    <input type="text" name="name" placeholder="Enter new name" required>
+                    <input type="file" name="image" required>
+                    <button type="submit">Update Image</button>
+                </form>
+                <form action="/delete-item" method="post">
+                    <input type="hidden" name="itemId" value="<%= item._id %>">
+                    <button type="submit">Delete Image</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</div>
+
+    <footer>
+        <p>Alisher Khairullin SE-2207.</p>
+    </footer>
+</body>
+</html>

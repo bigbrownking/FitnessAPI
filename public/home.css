@@ -1,0 +1,282 @@
+body > *{
+  max-width: 100%;
+}
+body{
+  font-family: 'Montserrat',sans-serif;
+  background-color: black;
+}
+.navbar a{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin: 0 35px;
+}
+@media (max-width: 768px) {
+  body {
+      font-size: 16px;
+      line-height: 1.5;
+  }
+  #last{
+      font-size: 16px;
+  }
+}
+.mySlides { display: none }
+img { vertical-align: middle; }
+/* Slideshow container */
+.slideshow-container {
+    max-width: 750px;
+    position: relative;
+    margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text { font-size: 11px }
+}
+.mySlides img {
+  display: block; 
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prev,
+.next{
+  margin: 10px;
+  text-decoration: none;
+}
+*{
+  margin:0;
+  padding:0;
+}
+ .theme{
+  color: yellow;
+}
+#btn{
+  background-color: yellow;
+  width:120px;
+  border-radius: 15px;
+}
+#btn button:hover{
+  background: white;
+  border: yellow;
+  transition: 0.5s ease-in-out;
+}
+#submitBtn{
+  background-color: yellow;
+  width:120px;
+  border-radius: 15px;
+}
+#submitBtn button:hover{
+  background: white;
+  border: yellow;
+  transition: 0.5s ease-in-out;
+}
+/* equipment */
+.container3 .greyRec{
+  margin-top: 200px;
+}
+.container3 .greyRec h1{
+  color: white;
+}
+.bag{
+  width: 300px;
+  margin-left: 70px; 
+}
+.bag1{
+  margin-left: 70px; 
+  width: 300px;
+}
+.bag2{
+  margin-left: 70px; 
+  height: 300px;
+  width: 300px;
+}
+.bgimg{
+  margin-top: 200px;
+}
+#me_txt{
+  text-align: center;
+  font-size: 30px;
+}
+/* GALLERY */
+.gallery{
+  border-radius: 25px;
+  margin: 0 15px;
+  margin-top: 15px;
+}
+/* CONTANCT */
+.contactUs{
+  margin: 150px 50px;
+}
+.contactUs p{
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+}
+.btn {
+  display: inline-flex;
+  width: 100%;
+}
+#form-submit {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: black;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* END */
+.container6{
+  display: flex;
+  align-items: center;
+}
+.firstRow .img4{
+  margin-left: 80px;
+}
+/* CONTENT */
+.content{
+  margin: 200px 50px;
+}
+.content h1{
+  color: #F7F7F7;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+#cont .col-md-3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cont h1{
+  transform: rotate(-90deg); 
+  transform-origin: 0 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+#cont #first{
+  margin-top: 50px;
+  background-image: linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.78)), url("../img/img1.png") ;
+  background-size: cover;
+  background-position: cover;
+}
+#cont #second{
+  margin-top: 50px;
+  background-image: linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.78)), url("../img/img2.png") ;  
+  background-size: cover;
+  background-position: cover;
+}
+#cont #third{
+  margin-top: 50px;
+  background-image: linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.78)), url("../img/img3.png") ;
+  background-size: cover;
+  background-position: cover;
+}
+#cont #forth{
+  margin-top: 50px;
+  background-image: linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.78)), url("../img/gygygygygyg.jpg") ;
+  background-size: cover;
+  background-position: cover;
+}
+.txt{
+  margin-top: 400px;
+  margin-left:100px;
+}
+.card_img h1{
+  transform: rotate(-90deg); 
+  transform-origin: 0 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn h1{
+  font-size: 16px;
+  color: black;
+}
+.btn_main h1{
+color: black;
+font-family: Adobe Garamond Pro;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2px;
+font-size: 25px;
+}
+#loginSubmitBtn{
+  background-color: yellow;
+  width:120px;
+  border-radius: 15px;
+}
+#loginSubmitBtn button:hover{
+  background: white;
+  border: yellow;
+  transition: 0.5s ease-in-out;
+}#SignBtn{
+  background-color: yellow;
+  width:120px;
+  border-radius: 15px;
+}
+#SignBtn button:hover{
+  background: white;
+  border: yellow;
+  transition: 0.5s ease-in-out;
+}
